@@ -1,0 +1,12 @@
+Adding the item to the cart
+- Create the route to add cart items.
+- Check if there is a cart in the session.
+- Save the cart item to the session.
+ - Use the following structure:
+  {                 total: 0,
+  itemList: [
+   {
+   product: {
+   _id: ObjectId{'#'},
+   name: 'Some Product',
+     description: 'This is an example',                
