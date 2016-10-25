@@ -1,0 +1,21 @@
+{
+  "name": "simple-shop",
+  "description": "this is a simple-shop",
+  "main": "app.js",
+  "authors": [
+    "smitha"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/smitha26/simple_shop",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0",
+    "less": "^2.7.1"
+  }
+}

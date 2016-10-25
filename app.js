@@ -19,7 +19,7 @@ MongoClient.connect('mongodb://smithaG:sgki2345@ds019866.mlab.com:19866/simple_s
     db = database;
     console.log('Succesfully connected to database')
     //Create a server that will process the requests
-    app.listen(3000, function() {
+    app.listen(5000, function() {
         console.log('My app server is running on local host 3000')
     })
 
@@ -40,6 +40,8 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }))
+
+
 
 app.get('/', function(request, response) {
     response.render('index.ejs');
@@ -229,6 +231,22 @@ app.get ('/cart/remove/:index', function(request, response){
 }
 });
 
+app.get('/template', function(request, response) {
+    response.render('template.ejs');
+
+});
+
+app.get('/cart/confirm', function(request, response) {
+    response.render('confirm.ejs');
+});
+
+app.get('/cart/pay', function(request, response) {
+    response.render('pay.ejs');
+});
+
+app.get('/cart/summary', function(request, response) {
+    response.render('summary.ejs');
+});
 
 
 // app.get('/cart/add/:id', function(request, response){
