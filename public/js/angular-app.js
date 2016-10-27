@@ -55,8 +55,9 @@ module.controller (
             $scope.name = 'bob';
             $scope.nameList = ['sarah', 'joe', 'dan'];
 
-            $scope.test = function (){
-                console.log('-this is my test running....');
+            $scope.changeName = function (name){
+                console.log('-this is my test running: ', name);
+                $scope.name = name;
             }
             //Create a method that will pull user data from the stateProvider
             $scope.getUsers = function () {
@@ -65,9 +66,11 @@ module.controller (
                     headers: {
                         'Content-Type': 'application/json'
                     },
+                    //Has to be send so that header 
                     data: ''
-                }).success (function () {
-                    console.log ('-Got back response.');
+                }).success (function (response) {
+                    console.log ('-Got back response:' , response);
+                    $scope.name = response.data.name;
 
                 });
             }
