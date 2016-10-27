@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Simple-shop</title>
+    </head>
+    <!-- Tell angular to launch MyApp -->
+    <body ng-app="MyApp">
+        <!-- Include the page header -->
+        <div ng-include="'templates/header.html'" ></div>
+
+         <!-- Main page content where angylar will inject content -->
+          <div ui-view></div>
+          <!-- Include the page footer -->
+          <div ng-include="'templates/footer.html'"></div>
+
+        <!-- Include the page -->
+
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <script src="\lib\angular\angular.min.js"></script>
+        <script src="\lib\angular-ui-router\release\angular-ui-router.min.js"></script>
+        <script src="/js/angular-app.js"></script>
+
+    </body>
+</html>

@@ -8,6 +8,28 @@ const bodyParser = require('body-parser');
 const port = 3000;
 //set the database to shortcut db
 
+app.get ('/template', function(req, res){
+    var contentType = req.headers ['content-type'];
+    if (contentType =='application/json'){
+        //send json data
+        res.json ({
+            data: {
+                name: 'bob',
+                nameList: ['sue','smith','keith']    
+            }
+        });
+    }
+    else {
+        res.render('template.ejs');
+    }
+    // console.log('This is the content type:', req.headers ['content-type'])
+    // res.render('template.ejs')
+});
+app.get('/angular', function(request, response) {
+    response.sendFile(__dirname + '/public/templates/index.html');
+    //response.render('angular/index.ejs');
+
+});
 //Create a simple shortcut way to access the database
 MongoClient.connect('mongodb://smithaG:sgki2345@ds019866.mlab.com:19866/simple_shop', function(error, database) {
     //Make sure there are no errors connecting with the db
@@ -19,8 +41,9 @@ MongoClient.connect('mongodb://smithaG:sgki2345@ds019866.mlab.com:19866/simple_s
     db = database;
     console.log('Succesfully connected to database')
     //Create a server that will process the requests
-    app.listen(5000, function() {
-        console.log('My app server is running on local host 3000')
+    var port = 5000;
+    app.listen(port, function() {
+        console.log('My app server is running on local host port ' , port)
     })
 
 })

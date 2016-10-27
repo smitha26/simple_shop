@@ -25,9 +25,12 @@
             rootpath: ":/a.com/"
         };
     </script>
+<!-- <script src="/lib/public/css/style.less"></script> -->
 
     <!-- Include LessCss as our css precomiler -->
     <script src="/lib/less/dist/less.min.js" type="text/javascript"></script>
+    <script src="\lib\jquery\dist\jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -62,7 +65,7 @@
             <div class="slider">
                 <ul>
                     <li>
-                        <div>
+                        <div class="product">
                             <img src= "">
                             <div>
                             <h3>Cowhide Standard Crew</h3>
@@ -75,52 +78,82 @@
             </ul>
         </div>
 
-        <div class="column-3">
-            <div class="product">
-                <img src="">
-                <div>
-                    <h3>Cowhide Standard Crew</h3>
-                    <p>
-                        Lorem iosum dolor sit amet. This is a whit shirt, This is a whit shirt,This is a whit shirt,This is a whit shirt,This is a whit shirt,
-                        This is a whit shirt,This is a whit shirt,This is a whit shirt,
-                    </p>
-                    <a href="#">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column-3">
+        <div class="grid">
+            <!-- Grid coloumn -->
+            <div class="column" large>
                 <div class="product">
-                    <img src="">
-                    <div>
+                    <img src="/img/shirt.png">
+                    <div class="description">
                         <h3>Cowhide Standard Crew</h3>
                         <p>
                             Lorem iosum dolor sit amet. This is a whit shirt, This is a whit shirt,This is a whit shirt,This is a whit shirt,This is a whit shirt,
                             This is a whit shirt,This is a whit shirt,This is a whit shirt,
                         </p>
                         <a href="#">Buy Now</a>
-                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="column-3">
-                    <div class="product">
-                        <img src="">
-                        <div>
-                            <h3>Cowhide Standard Crew</h3>
-                            <p>
-                                Lorem iosum dolor sit amet. This is a whit shirt, This is a whit shirt,This is a whit shirt,This is a whit shirt,This is a whit shirt,
-                                This is a whit shirt,This is a whit shirt,This is a whit shirt,
-                            </p>
-                            <a href="#"><Buy Now</a>
-                            </div>
-                        </div>
+            <div class="column">
+                <div class="product">
+                    <img class="image" src="/img/shirt.png">
+                    <div class="description">
+                        <h3>Cowhide Standard Crew</h3>
+                        <p>
+                            Lorem iosum dolor sit amet. This is a whit shirt, This is a whit shirt,This is a whit shirt,This is a whit shirt,This is a whit shirt,
+                            This is a whit shirt,This is a whit shirt,This is a whit shirt,
+                        </p>
+                        <a href="#">Buy Now</a>
                     </div>
+                </div>
+            </div>
 
+            <div class="column">
+                <div class="product">
+                    <img src="/img/shirt.png">
+                    <div class="description">
+                        <h3>Cowhide Standard Crew</h3>
+                        <p>
+                            Lorem iosum dolor sit amet. This is a whit shirt, This is a whit shirt,This is a whit shirt,This is a whit shirt,This is a whit shirt,
+                            This is a whit shirt,This is a whit shirt,This is a whit shirt,
+                        </p>
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</div>
 
         <!-- Page or ducment footer -->
-        <div class="footer"></div>
+        <div class="footer">
+            <div class="grid">
+                <div class="column">
+                    <h3>FEATURED SALE</h3>
+                    <a href="#">Alexis Hudson</a><br>
+                    <a href="#">American Apparel</a><br>
+                </div>
+                <div class="column">
+                    <h3>FEATURED SALE</h3>
+                    <a href="#">Alexis Hudson</a><br>
+                    <a href="#">American Apparel</a><br>
+                </div>
+                <div class="column">
+                    <h3>FEATURED SALE</h3>
+                    <a href="#">Alexis Hudson</a><br>
+                    <a href="#">American Apparel</a><br>
+                </div>
+                <div class="column">
+                    <h3>FEATURED SALE</h3>
+                    <a href="#">Alexis Hudson</a><br>
+                    <a href="#">American Apparel</a><br>
+                </div>
+
+            </div>
+        </div>
     </div>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

@@ -5,14 +5,20 @@
 @color-03: #38c7b4;
 @color-04: #2da89b;
 @color-05: #386656;
+@color-06: #b2b2b2;
 
 @max-page-width: 1200px;
 
 body {
-    background-color: @color-01;
+    background-color: @color-04;
 }
 
 .page {
+    //stop box elements for sizing beyond
+    //their width when adding padding or borders
+    * {
+        box-sizing: border-box;
+    }
     border: 1px dotted red;
 
     .header {
@@ -70,6 +76,100 @@ body {
             }
         }
     }
-}
+
+    .body {
+        background-color: @color-01;
+        margin: auto;
+        // max-width: @max-page-width;
+
+    }
+
+    .grid {
+            border: 1px dotted red;
+            display: table;
+            margin: auto;
+            max-width: @max-page-width;
+            padding: 10px;
+             width: 100%;
+            .column {
+                border: 1px dotted green;
+                display: table-cell;
+                }
+                .large {
+                    width: 80%;
+                }
+
+
+    .product {
+                border: 1px dotted blue;
+                overflow: auto;
+                padding: 20px;
+                >img{
+                    border: 1px dotted red;
+                    width: 50%;
+
+                    float: left;
+                }
+                .description {
+                    border: 1px dotted green;
+                    max-width: 50%;
+                    float: left;
+                    //hide description content
+                    >p {
+                        display: none
+                    }
+                    >h3 {
+                        font-size: 20px;
+                        // color: blue;
+                        color: @color-06;
+                    }
+                }
+                // >div{
+                //     border: 1px dotted green;
+                // }
+                >p{
+                    display: none;
+                }
+                a  {
+                        border-radius: 5px;
+                        background-color: @color-04;
+                        color: @color-01;
+                        padding: 20px;
+                        display:inline-block;
+                        text-decoration: none;
+                        text-transform:uppercase;
+
+
+                    }
+            }
+        }
+
+        .slider {
+            background-color: @color-04;
+            >product {
+            margin: auto;
+            max-width: @max-page-width;
+            padding: 10px;
+            }
+            >p {
+                display: none;
+            }
+        }
+    }
+
+    .footer {
+        .grid {
+                // border: 1px dotted red;
+                margin: auto;
+                max-width: @max-page-width;
+                padding: 10px;
+                .column {
+                    // border: 1px dotted green;
+                    display: table-cell;;
+                    // width: 100%
+                    }
+            }
+
+    }
 
 ////////////////////////////////////
